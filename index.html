@@ -1,0 +1,39 @@
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Snap Image Ad</title>
+    <link rel="stylesheet" href="/static/style.css">
+</head>
+<body>
+<button id="next-btn" class="next-button">Next</button>
+    <div class="ad-container">
+        <div class="ad-image" style="background-image: url('{{ product.thumbnail }}');">
+            <div class="title-banner">
+                <h2>{{ product.title }}</h2>
+            </div>
+
+         <div class="ad-overlay">
+    <div class="price-heart-container">
+        <div class="price-banner">
+            <p>${{ product.price }} </p>
+        </div>
+        <div class="heart"></div>
+    </div>
+
+    
+    <div class="bottom-actions">
+        <button class="order-now">Order Now</button>
+        <div class="share">
+            <span>&#10140;</span>
+        </div>
+    </div>
+</div>
+
+    </div>
+
+<script>
+        document.getElementById("next-btn").addEventListener("click", function() {
+            window.location.href = "/next";
+        });
+    </script>
+</body>
+</html>
